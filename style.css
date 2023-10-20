@@ -1,0 +1,24 @@
+@keyframes changeTitle {
+    0%   { top:0px;}
+    50%  { top:-5px;}
+    100% {  top:0px;}
+  }
+
+  @keyframes changee {
+    0%   { top:0px;}
+    50%  { top: 5px;}
+    100% {  top:0px;}
+  }
+
+  .dd{
+    position: relative;
+    animation-name: changeTitle;
+  animation-duration: 1s;
+  
+  }
+
+  .bb{
+    position: relative;
+    animation-name: changee;
+  animation-duration: 1s;
+  }
