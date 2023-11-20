@@ -68,7 +68,11 @@
         </div>
       </nav>
 
-
+      <div class="flex m-6 flex-wrap content-stretch  ">
+        <div class="mx-[21%]"></div>
+        <button class="bg-cyan-400 rounded-lg p-2 w-full mx-28 " id="vi">Create Chart</button>
+      
+      </div>
   <div class="flex">
     <!-- Chart -->
  <div class="max-w-lg w-full p-4 md:p-6"> 
@@ -79,16 +83,22 @@
    <div>
   <div class="grid gap-4 m-6 md:grid-cols-3 h-14 " id="di">
   
-    <div class="relative">
-        <input type="text" class="x block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+    <div class="relative p-2 bg-gray-900 rounded-lg text-white">
+      Label <input type="text" class="mb-4 block rounded-t-lg px-2.5 pb-2.5 pt-2 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+      placeholder="Type the value"  /> Value
+      <input type="text" class="x block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
          placeholder="Type the value" value="15" />
     </div>
 
-    <div class="relative">
+    <div class="relative p-2 bg-gray-900 rounded-lg text-white">
+      Label <input type="text" class="mb-4 block rounded-t-lg px-2.5 pb-2.5 pt-2 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+      placeholder="Type the value"  /> Value
         <input type="text"  class="x block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="Type the value" value="40"/>
     </div>
 
-    <div class="relative">
+    <div class="relative p-2 bg-gray-900 rounded-lg text-white">
+      Label <input type="text" class="mb-4 block rounded-t-lg px-2.5 pb-2.5 pt-2 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+      placeholder="Type the value"  /> Value
         <input type="text"  class="x block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50 dark:bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="Type the value" value="45"/>
     </div>
   
@@ -96,10 +106,7 @@
 
 </div>
 
-<div class="mt-56 ml-56">
-  <button class="bg-cyan-400 rounded-lg p-2 px-12" id="vi">Create Chart</button>
 
-</div>
 
    </div>
   <!-- add button  -->
@@ -171,7 +178,7 @@
                 }
               },
             },
-            labels: ["Direct", "Organic search", "Referrals"],
+           // labels: ["Direct", "Organic search", "Referrals"],
             dataLabels: {
               enabled: true,
               style: {
