@@ -1,12 +1,6 @@
 @keyframes changeTitle {
-    0%   { top:0px;}
-    50%  { top:-5px;}
-    100% {  top:0px;}
-  }
-
-  @keyframes changee {
-    0%   { top:0px;}
-    50%  { top: 5px;}
+    0%   { top:-20px;}
+   
     100% {  top:0px;}
   }
 
@@ -17,8 +11,4 @@
   
   }
 
-  .bb{
-    position: relative;
-    animation-name: changee;
-  animation-duration: 1s;
-  }
+ 
