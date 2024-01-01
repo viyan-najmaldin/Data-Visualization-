@@ -61,5 +61,37 @@
       display: flex;
   justify-content: space-around;
      }
+     #myTable{
+         background: radial-gradient(rgb(249, 149, 78) , rgb(50, 165, 223));
+      border-radius: 20px !important;
 
-  
+        }
+      #myTable  tbody{
+        border: cadetblue 2px solid !important;
+      }
+
+     input:focus, input:active {
+      background: transparent;
+      outline: none;
+  }
+  #myTable input:hover {
+    border-bottom: rgb(63, 134, 156) 2px solid;
+  }
+  input{
+    background: transparent !important;
+
+  }
+
+     .hide {
+      display: none;
+    }
+    .dele{
+      color: rgb(255, 132, 66); 
+    }
+    
+    .dele:hover + .hide {
+      display: block;
+      color: rgb(255, 132, 66);
+      font-size: 10px;
+      display: inline;
+    }
