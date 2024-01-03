@@ -29,6 +29,17 @@
   display: none;
 }
 
+::placeholder {
+  color: #424242 !important;
+  opacity: 1 !important; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Edge 12-18 */
+  color: #424242 !important;
+
+
+}
+
    .mystyle{
     animation-name: fadeIn;
     
