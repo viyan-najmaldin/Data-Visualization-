@@ -42,7 +42,7 @@
 
    .mystyle{
     animation-name: fadeIn;
-    
+     background-color: rgba(17, 24, 39, 0.767); 
   animation-duration: 2s;
     height: auto;
   display: block;
@@ -52,7 +52,7 @@
   bottom: 0;
   right: 0%;
   width: 500px;
-  padding: 20px 100px;
+  padding: 10px 40px;
   /* margin-right: 5%; */
   border-radius:  50px 0 0;
   
@@ -105,4 +105,13 @@
       color: rgb(255, 132, 66);
       font-size: 10px;
       display: inline;
+    }
+
+    #line-btn1 , #line-btn2 , #line-btn3{
+      background: none !important;
+      padding: 10px;
+      margin-left: 5px;
+      background-color: rgb(233, 230, 125) !important;
+     border-radius: 5px;
+     width: 25%;
     }

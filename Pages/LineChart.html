@@ -78,9 +78,9 @@
       <h1 class="headd">Use your data to create Line Chart </h1>
   
         <!-- Chart -->
- <div class="max-w-4xl  w-full p-4 md:p-6"> 
+ <div class="max-w-4xl  w-full "> 
     <div id="pdf">
-  <div class="py-6" id="line-chart"></div>  
+  <div class="py-4" id="line-chart"></div>  
       </div> 
     </div> 
 
@@ -107,7 +107,7 @@
                <th class="px-5"></th> 
             </tr>
         </thead>
-        <tbody>
+        <tbody id="tbody">
             <tr class=" border-b    bg-gray-800    border-gray-700 hover:bg-gray-50    hover:bg-gray-600">
                 <th scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap    text-white">
                     <input type="text" class="range range1 bg-gray-800 text-center text-lg text-white" value="1 Feb" placeholder="Range 1" required> 
@@ -189,11 +189,11 @@
         </td>   
       </tr>
 
-      <tr class=" border-b    bg-gray-800    border-gray-700 hover:bg-gray-50    hover:bg-gray-600">
+      <tr class=" border-b  bg-gray-800  border-gray-700 hover:bg-gray-50  hover:bg-gray-600">
         <th scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap    text-white">
             <input type="text" class="range range6 bg-gray-800 text-center text-lg text-white" value="6 Feb" placeholder="Range 6" required> 
         </th>
-        <td class="px-2 py-2">
+        <td class="p-2">
             <input type="number" class="x-value bg-gray-800 text-center text-lg text-white" value="43" placeholder="value 6" required> 
         </td>
         <td class="px-2 py-2">
@@ -207,9 +207,13 @@
         </tbody>
         
     </table>
-    <div class="flex m-6   ">
-     
-      <input  type="submit"  name="pew pew" value="Create Chart">
+    <div class="flex m-6 justify-between">
+      <input id="line-btn1" type="submit"  name="pew pew" value="Create Chart">
+      
+        <input type="button"  id="line-btn3" onclick="printDiv('pdf','Title')" name="print" value="Print" >
+    
+      <input  type="button" id="line-btn2" name="add" value="Add Row" onclick="CreateRow()">
+
     </div>
   </form>
 </div>
@@ -218,7 +222,7 @@
 
 <!-- print button -->
 
-<div id="print"  class="none bg-gray-900 ">
+<div id="print"  class="none ">
   <h1>Great Job !</h1>
   <div class="print">
   <div>You may want to print your pie chart  click here :</div>
@@ -235,22 +239,84 @@
     <div class="tooltip-arrow" data-popper-arrow></div>
 </div>
 </div>
-</div></div>
-
+</div>
+</div>
 
  </div>
    
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
   <script>
+     let tbody =document.getElementById("tbody");
+
 function deleteRow(r) {
             var i = r.parentNode.parentNode.rowIndex;
             document.getElementById("myTable").deleteRow(i);
         }
 
+let CreateRow = ()=>{
+  /// create new tr to the table
+     let newtr= document.createElement("tr");
+     newtr.classList.add("border-b","bg-gray-800","border-gray-700","hover:bg-gray-50"  ,"hover:bg-gray-600")
+     tbody.appendChild(newtr);
+
+//// create new th for range 
+     let newth= document.createElement("th");
+     newth.setAttribute("scope","row");
+     newth.classList.add("p-2","font-medium","text-gray-900","whitespace-nowrap","text-white");
+     newtr.appendChild(newth);
+     let thInput = document.createElement("input");
+    thInput.setAttribute("type","text");
+    thInput.setAttribute("placeholder","Type the Range");
+    thInput.setAttribute("required","")
+    thInput.setAttribute("class", "range range6 bg-gray-800 text-center text-lg text-white" )
+    newth.appendChild(thInput);
+
+//// create new td for x line
+    let newtd1= document.createElement("td");
+     newtd1.classList.add("p-2");
+     newtr.appendChild(newtd1);
+     let td1Input = document.createElement("input");
+    td1Input.setAttribute("type","number");
+    td1Input.setAttribute("value","0");
+    td1Input.setAttribute("placeholder","Type the value");
+    td1Input.setAttribute("required","")
+    td1Input.setAttribute("class", "x-value bg-gray-800 text-center text-lg text-white" )
+    newtd1.appendChild(td1Input);   
+
+//// create new td for y line 
+    let newtd2= document.createElement("td");
+     newtd2.classList.add("p-2");
+     newtr.appendChild(newtd2);
+     let td2Input = document.createElement("input");
+    td2Input.setAttribute("type","number");
+    td2Input.setAttribute("value","0");
+    td2Input.setAttribute("placeholder","Type the value");
+    td2Input.setAttribute("required","")
+    td2Input.setAttribute("class", "y-value bg-gray-800 text-center text-lg text-white" )
+    newtd2.appendChild(td2Input);   
+    
+    
+       
+////// add delete button for new row
+    let newtd3= document.createElement("td");
+    newtr.appendChild(newtd3);
+    newtd3.innerHTML = '<input type="button" value="x" class="dele" onclick="deleteRow(this)" />'
+    let newSpan= document.createElement("span")
+    newSpan.classList.add("hide");
+    newSpan.innerText="Delete";
+    newtd3.appendChild(newSpan);   
+    
+  }
+
+
        
 let Chartt = ()=> {
-  let x=document.querySelector(".x");
+  let p= document.getElementById("print");
+        p.classList.remove("none")
+        p.classList.add("mystyle")
+
+let x=document.querySelector(".x");
 let y=document.querySelector(".y");
 let range=document.querySelectorAll('.range');
 let xValue=document.querySelectorAll('.x-value');
@@ -348,14 +414,28 @@ let yValue=document.querySelectorAll('.y-value');
      vi.addEventListener("click",()=>Chartt() );
  
      let cc = ()=>{
-  event.preventDefault()
-  // formm.addEventListener('submit', (event) => {
-      console.log("edddddddddddd")
-      
+      event.preventDefault() 
       Chartt()
-    // });
  } 
-    // window.addEventListener("load", );
+
+ function printDiv(divId,
+ title) {
+
+ let mywindow = window.open('', 'PRINT', 'height=650,width=900,top=100,left=150');
+
+ mywindow.document.write(`<html><head><title>${title}</title>`);
+ mywindow.document.write('</head><body >');
+ mywindow.document.write(document.getElementById(divId).innerHTML);
+ mywindow.document.write('</body></html>');
+
+ mywindow.document.close(); // necessary for IE >= 10
+ mywindow.focus(); // necessary for IE >= 10*/
+
+ mywindow.print();
+ mywindow.close();
+console.log('printttt')
+ return true;
+}
   </script>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
