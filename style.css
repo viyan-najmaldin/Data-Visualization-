@@ -30,35 +30,34 @@
 }
 
 ::placeholder {
-  color: #424242 !important;
+  color: #6c6767 !important;
   opacity: 1 !important; /* Firefox */
 }
 
 ::-ms-input-placeholder { /* Edge 12-18 */
-  color: #424242 !important;
+  color: #6c6767 !important;
 
 
 }
 
    .mystyle{
     animation-name: fadeIn;
-     background-color: rgba(17, 24, 39, 0.767); 
+     background-color: rgba(17, 24, 39, 0.967); 
   animation-duration: 2s;
     height: auto;
   display: block;
     color: #fff;  
     /* font-size: larger; */
    position: fixed;
-  bottom: 0;
-  right: 0%;
-  width: 500px;
-  padding: 10px 40px;
+  bottom: 7px;
+  right: 7px;
+  width: 350px;
+  padding: 10px 20px;
   /* margin-right: 5%; */
-  border-radius:  50px 0 0;
-  
-
+  border-radius: 5px ;
         }
 
+     
    .apexcharts-legend-text{
     color: rgb(85, 97, 100) !important;
      }
@@ -68,35 +67,25 @@
       font-size: x-large;
       color: rgb(255, 134, 91);
      }
-     .print{
-      display: flex;
-  justify-content: space-around;
-     }
-     #myTable{
-         background: radial-gradient(rgb(249, 149, 78) , rgb(50, 165, 223));
-      border-radius: 20px !important;
+    
 
-        }
-      #myTable  tbody{
+     #table, table tr input{
+        border-radius: 20px !important;
+      }
+      #table  #tbody{
         border: cadetblue 2px solid !important;
       }
-
      input:focus, input:active {
-      background: transparent;
       outline: none;
   }
-  #myTable input:hover {
-    border-bottom: rgb(63, 134, 156) 2px solid;
+  #table input:hover {
+    border: rgb(63, 134, 156) 2px solid ;
   }
-  input{
-    background: transparent !important;
-
-  }
-
-     .hide {
+  .hide {
       display: none;
     }
-    .dele{
+ .dele{
+      padding-left: 10px;
       color: rgb(255, 132, 66); 
     }
     
@@ -107,11 +96,21 @@
       display: inline;
     }
 
-    #line-btn1 , #line-btn2 , #line-btn3{
-      background: none !important;
-      padding: 10px;
+    .line-btns{
+      padding: 7px;
       margin-left: 5px;
       background-color: rgb(233, 230, 125) !important;
-     border-radius: 5px;
-     width: 25%;
+     border-radius: 20px;
+     width: 23%;
     }
+
+    .line-btns:hover{
+      transition: all .5s;
+      background-color:#ac99fb !important;
+    }
+
+    .dele:hover {
+      border: none !important;
+      padding: 5px;
+    }
+   

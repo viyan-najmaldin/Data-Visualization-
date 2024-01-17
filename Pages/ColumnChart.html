@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualization</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/4110/4110554.png" class="h-10 mr-3" alt="Data VisualizationLogo">
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="dark:bg-gray-800">
+    <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="../index.html" class="flex items-center">
+              <img src="https://cdn-icons-png.flaticon.com/512/4110/4110554.png" class="h-10 mr-3" alt="Data VisualizationLogo" />
+              <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-cyan-400">Data Visualization</span>
+          </a>
+          <button data-collapse-toggle="navbar-dropdown" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 ro md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-dropdown" aria-expanded="false">
+              <span class="sr-only">Open main menu</span>
+              <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+              </svg>
+          </button>
+          <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+              <li>
+                <a href="Home.html" class="block py-2 pl-3 pr-4 text-white bg-cyan-700 rounded md:bg-transparent hover:text-cyan-400 md:text-cyan-400 md:p-0 md:dark:text-cyan-400 dark:bg-cyan-600 md:dark:bg-transparent " aria-current="page">Home</a>
+              </li>
+              <li>
+                  <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-cyan-400 md:p-0 md:w-auto dark:text-white md:dark:hover:text-cyan-400 dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Charts <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+        </svg></button>
+                  <!-- Dropdown menu -->
+                  <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                      <ul class="py-2 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                        <li>
+                          <a href="./PieChart.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Pie Chart</a>
+                        </li>
+                        <li>
+                          <a href="./LineChart.html" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Line Chart</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Column Chart</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Bar Chart</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Radial Chart</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Donut Chart</a>
+                        </li>
+                      </ul>
+                      <!-- <div class="py-1">
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white">Sign out</a>
+                      </div> -->
+                  </div>
+              </li>
+              <li>
+                <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-cyan-400 md:p-0 dark:text-white md:dark:hover:text-cyan-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">About</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-cyan-400 md:p-0 dark:text-white md:dark:hover:text-cyan-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+   
+      <div class="flex justify-between">
+        <div class="flex flex-col justify-center items-center ml-28">
+       
+       
+           <div class="flex m-6  ">
+               <button class="bg-cyan-400 rounded-lg p-4 text-lg hover:duration-1000  font-serif hover:bg-orange-200 w-full py-4 px-64" id="vi">Create Chart</button>
+             </div>
+             <h1 class="headd">Use your data to create Line Chart </h1>
+         
+               <!-- Chart -->
+        <div class="max-w-4xl bg-gray-900 rounded-lg w-full "> 
+           <div id="pdf">
+         <div class="py-4" id="column-chart"></div>  
+             </div> 
+           </div> 
+       
+          <!-- inputs  -->
+          
+       
+       <div class=" shadow-md sm:rounded-lg m-6 mb-14">
+         <form class="border-none shadow-none" onsubmit="cc()">
+          
+           <div class="overflow-auto relative max-w-3xl w-full">
+        <table class="table-auto text-sm rtl:text-right bg-indigo-400 text-gray-400 " id="table">
+             
+               <thead class="text-xs text-gray-700  text-gray-400 ">
+                   <tr>
+                     <th class="px-5"></th> 
+       
+                       <th scope="col" class="px-2  py-2 text-lg">
+                         Range
+                       </th>
+                       <th scope="col" class=" py-2">
+                         <input type="text" class="A coll text-lg hover:text-white text-center bg-indigo-400 hover:bg-gray-800" value="Line A" placeholder="Line A" required>
+                     </th>
+                       <th scope="col" class=" py-2">
+                         <input type="text" class="B coll  text-center text-lg hover:text-white bg-indigo-400 hover:bg-gray-800" value="Line B" placeholder="Line B" required>
+                     </th>
+                   </tr>
+               </thead>
+               <tbody id="tbody">
+                   <tr class=" border-b  bg-gray-800   border-gray-700 ">
+                       <td >
+                         <input type="button" value="x" class="dele" onclick="deleteRow(this)">
+                         <span class="hide">Delete</span>
+                     </td>
+                      <th scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap text-white">
+                           <input type="text" class="range range1 bg-gray-800 text-center text-lg text-white" value="1 Feb" placeholder="Type the Range" required> 
+                       </th>
+                       <td class="px-2 py-2">
+                         <input type="number" class="A-value bg-gray-800 text-center text-lg text-white" value="5" placeholder="Type the value" required> 
+                     </td>
+                       <td class="px-2 py-2">
+                           <input type="number" class="B-value bg-gray-800 text-center text-lg text-white" value="10" placeholder="Type the value" required> 
+                       </td>
+                       
+                   </tr>
+                  
+                   <tr class=" border-b bg-gray-800 border-gray-700 ">
+                        <td >
+                         <input type="button" value="x" class="dele" onclick="deleteRow(this)">
+                         <span class="hide">Delete</span>
+                     </td>
+                       <th scope="row" class="px-2 py-2  font-medium text-gray-900 whitespace-nowrap    text-white">
+                           <input type="text" class="range range2 bg-gray-800 text-center text-lg text-white" value="2 Feb" placeholder="Type the Range" required> 
+                       </th>
+                       <td class="px-2 py-2">
+                           <input type="number" class="A-value bg-gray-800 text-center text-lg text-white" value="13" placeholder="Type the value" required> 
+                       </td>
+                       <td class="px-2 py-2">
+                           <input type="number" class="B-value bg-gray-800 text-center text-lg text-white" value="85" placeholder="Type the value" required> 
+                       </td>
+                     
+                   </tr>
+                   
+                   <tr class=" border-b    bg-gray-800    border-gray-700">
+                     <td >
+                       <input type="button" value="x" class="dele" onclick="deleteRow(this)">
+                       <span class="hide">Delete</span>
+                   </td> 
+                     <th scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap    text-white">
+                         <input type="text" class="range range3 bg-gray-800 text-center text-lg text-white" value="3 Feb" placeholder="Type the Range" required> 
+                     </th>
+                     <td class="px-2 py-2">
+                         <input type="number" class="A-value bg-gray-800 text-center text-lg text-white" value="53" placeholder="Type the value" required> 
+                     </td>
+                     <td class="px-2 py-2">
+                         <input type="number" class="B-value bg-gray-800 text-center text-lg text-white" value="55" placeholder="Type the value" required> 
+                     </td>  
+                     
+                     
+                 </tr>
+       
+                 <tr class=" border-b    bg-gray-800    border-gray-700 ">
+                   <td >
+                     <input type="button" value="x" class="dele" onclick="deleteRow(this)">
+                     <span class="hide">Delete</span>
+                 </td>   
+                   <th scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap    text-white">
+                       <input type="text" class="range range4 bg-gray-800 text-center text-lg text-white" value="4 Feb" placeholder="Type the Range" required> 
+                   </th>
+                   <td class="px-2 py-2">
+                       <input type="number" class="A-value bg-gray-800 text-center text-lg text-white" value="43" placeholder="Type the value" required> 
+                   </td>
+                   <td class="px-2 py-2">
+                       <input type="number" class="B-value bg-gray-800 text-center text-lg text-white" value="45" placeholder="Type the value" required> 
+                   </td>   
+               </tr>
+       
+               <tr class=" border-b    bg-gray-800    border-gray-700 ">
+                   <td >
+                   <input type="button" value="x" class="dele" onclick="deleteRow(this)">
+                   <span class="hide">Delete</span>
+               </td>   
+                 <th scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap  text-white">
+                     <input type="text" class="range range5 bg-gray-800 text-center text-lg text-white" value="5 Feb" placeholder="Type the Range" required> 
+                 </th>
+                 <td class="px-2 py-2">
+                     <input type="number" class="A-value bg-gray-800 text-center text-lg text-white" value="23" placeholder="Type the value" required> 
+                 </td>
+                 <td class="px-2 py-2">
+                     <input type="number" class="B-value bg-gray-800 text-center text-lg text-white" value="65" placeholder="Type the value" required> 
+                 </td>  
+               
+             </tr>
+       
+             <tr class=" border-b  bg-gray-800  border-gray-700 "> 
+               <td >
+                 <input type="button" value="x" class="dele" id="dele" onclick="deleteRow(this)">
+                 <span class="hide">Delete</span>
+             </td> 
+               <th scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap    text-white">
+                
+                   <input type="text" class="range range6 bg-gray-800 text-center text-lg text-white" value="6 Feb" placeholder="Type the Range" required> 
+               </th>
+               <td class="p-2">
+                   <input type="number" class="A-value bg-gray-800 text-center text-lg text-white" value="43" placeholder="Type the value" required> 
+               </td>
+               <td class="px-2 py-2">
+                   <input type="number" class="B-value bg-gray-800 text-center text-lg text-white" value="25" placeholder="Type the value" required> 
+               </td>    
+               
+           </tr>
+               </tbody>
+               
+           </table>
+           </div>
+             
+           
+          
+           <div class="flex m-6 justify-between">
+             <input  type="button" class="line-btns"  id="line-btn2" name="add" value="Add Row" onclick="addRow()">
+             <button type="button" class="line-btns"  onclick="addColumn()">add column</button>
+             <input type="button" class="line-btns"   id="line-btn3" onclick="printDiv('pdf','Title')" name="print" value="Print" >
+             <input id="line-btn1" class="line-btns" type="submit"  name="pew pew" value="Create Chart">
+           </div>
+         </form>
+       </div>
+       
+       
+       
+       <!-- print button -->
+       
+       
+       
+        </div>
+       
+        <div class="">
+         <aside id="sidebar-multi-level-sidebar" class=" w-60 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+           <div class="h-full px-3 py-4 overflow-y-auto bg-gray-800">
+              <ul class="space-y-2 text-xs">
+                 <li>
+                    <a href="#table" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                     <svg class="w-[12px] h-[12px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
+                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1v14h16m0-9-3-2-3 5-3-2-3 4"/>
+                     </svg>
+                       <span class="ms-3">Create Chart</span>
+                    </a>
+                 </li>
+                 <li>
+                    <button type="button" class="flex items-center w-full p-2 transition duration-75 rounded-lg group text-white hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
+                     <svg class="w-[12px] h-[12px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"fill="none" viewBox="0 0 17 18">
+                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 12v5m5-9v9m5-5v5m5-9v9M1 7l5-6 5 6 5-6"/>
+                     </svg>
+                          <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Choose another type</span>
+                          <svg class="w-2 h-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                          </svg>
+                    </button>
+                    <ul id="dropdown-example" class="hidden ">
+                          <li>
+                             <a href="./PieChart.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Pie Chart</a>
+                          </li>
+                          <li>
+                             <a href="./ColumnChart.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Column Chart</a>
+                          </li>
+                          
+                    </ul>
+                 </li>
+                 <li>
+                    <a href="#" onclick="printDiv('pdf','Title')"  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"> 
+                     <svg class="w-[12px] h-[12px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 19">
+                       <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15h.01M4 12H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-3M9.5 1v10.93m4-3.93-4 4-4-4"/>
+                     </svg>
+                       <span class="flex-1 ms-3 whitespace-nowrap">Print</span>
+                    </a>
+                 </li>
+              
+              </ul>
+           </div>
+        </aside>
+        </div>
+           </div>  
+       
+           <div id="print"  class="none">
+             <div class="flex justify-between">
+              <h1 class="">Great Job !</h1>
+              <div id="close" onclick="closee()"  class=" p-2"><svg class="w-[12px]  h-[12px] text-gray-600 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+              </svg></div>
+             </div>
+              
+              <div class="flex justify-around"> 
+              <div class="text-sm"> You may want to print your pie chart  click here : </div>
+              <div > 
+                <button  onclick="printDiv('pdf','Title')" type="button" class="flex justify-center items-center w-[42px] h-[42px] text-gray-500 hover:text-gray-900 rounded-full border border-gray-200    border-gray-600 shadow-sm    hover:text-white    text-gray-400 hover:bg-gray-50    bg-gray-700    hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none    focus:ring-gray-400">
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M5 20h10a1 1 0 0 0 1-1v-5H4v5a1 1 0 0 0 1 1Z"/>
+                    <path d="M18 7H2a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2v-3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v3a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Zm-1-2V2a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v3h14Z"/>
+                </svg>
+                <span class="sr-only">Print</span>
+            </button>
+            <div id="tooltip-print" role="tooltip" class="absolute z-10 invisible inline-block w-auto px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip    bg-gray-700">
+                Print
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+            </div>
+            </div>
+            </div>
+
+ 
+
+   
+
+    
+
+   
+
+
+<script>
+    let tbody =document.getElementById("tbody");
+     let ccc=7;
+
+function deleteRow(r) {
+            var i = r.parentNode.parentNode.rowIndex;
+            document.getElementById("table").deleteRow(i);
+        }
+let charLine = 67;
+    
+        const addColumn = () => {
+    [...document.querySelectorAll('#table tbody tr')].forEach((row, i) => {
+        const input = document.createElement("input")
+        input.setAttribute('type', 'number')
+        input.setAttribute('value', '0')
+        input.setAttribute("placeholder","Type the value");
+        input.setAttribute("required","")
+
+        input.setAttribute("class", String.fromCharCode(charLine)+"-value bg-gray-800 text-center text-lg text-white" )
+        const cell = document.createElement("td")
+        cell.appendChild(input)
+        row.appendChild(cell)
+    });
+    [...document.querySelectorAll('#table thead tr')].forEach((row, i) => {
+        const input = document.createElement("input")
+        input.setAttribute('type', 'text')
+        input.setAttribute('value',"Line "+ String.fromCharCode(charLine))
+        input.setAttribute("placeholder","Type the Range");
+        input.setAttribute("required","")
+        input.setAttribute("class",String.fromCharCode(charLine)+" coll text-lg hover:text-white text-center bg-indigo-400 hover:bg-gray-800" )
+        
+        const cell = document.createElement("th")
+        // cell.setAttribute("class","px-2 py-2 font-medium text-gray-900 whitespace-nowrap  text-white")
+        cell.appendChild(input)
+        row.appendChild(cell)
+    });
+    ccc++;
+    charLine++;
+console.log("ssssssss")
+}   
+
+let rrows = 7;
+
+
+const addRow = () => {
+  let lrows = 65;
+      let table = document.getElementById("table");
+      let l =document.getElementsByTagName('td').length
+
+    let lengthCol = (((l+6) / table.rows.length))
+    let row = tbody.insertRow();
+    row.setAttribute("scope","row");
+    row.setAttribute("class"," border-b    bg-gray-800    border-gray-700 ");
+    for (let i =0; i<lengthCol ;  i++){
+      let cell = row.insertCell(i);
+      let inputs = document.createElement("input")
+      let deletee = document.createElement("span")
+      
+      if (i==0){
+      cell.innerHTML = '<input type="button" value="x" class="dele" onclick="deleteRow(this)" />'
+      deletee.setAttribute("class","hide")
+      deletee.innerText="Delete"
+      cell.appendChild(deletee)
+      }
+      else if (i==1){
+     inputs.setAttribute("class","range"+rrows+" range bg-gray-800 text-center text-lg text-white")
+     inputs.setAttribute("type","text")
+      inputs.setAttribute("placeholder","Type the Ralue");
+      inputs.setAttribute("required","")
+      cell.appendChild(inputs)
+    }
+else{
+  console.log(String.fromCharCode(lrows))
+  inputs.setAttribute("value","0")
+ inputs.setAttribute("type","nmber")
+      inputs.setAttribute("placeholder","Type the value");
+      inputs.setAttribute("required","")
+      inputs.setAttribute("class", String.fromCharCode(lrows)+"-value bg-gray-800 text-center text-lg text-white" )   
+      lrows++; 
+      cell.appendChild(inputs)
+    }    
+}
+console.log(rrows)
+rrows++;
+} 
+
+let p= document.getElementById("print");
+closse=document.getElementById("close");
+let closee = ()=>{
+  p.classList.add("none")
+        p.classList.remove("mystyle")
+  
+}
+
+let Chartt = ()=> {
+  let displyChart= document.querySelector(".chartt")
+  // displyChart.classList.remove("none")
+        p.classList.remove("none")
+        p.classList.add("mystyle")
+  
+
+let range=document.querySelectorAll('.range');
+ranges=  Object.values(range).map(i=>(i.value))
+   
+       
+      let arr = [];
+      let obj =[] ;
+     let col = document.getElementsByClassName("coll").length
+        let lineName = 65
+        let lineData = [];
+        let d=0;
+      while(col>0){
+     let pit = String.fromCharCode(lineName);
+     let bff= `${pit}Values`
+    let  pitValue=document.querySelectorAll(`.${pit}-value`);
+    pitValues=  Object.values(pitValue).map(i=>(i.value))
+    lineData.push(pitValues)
+     console.log(lineData[d])
+    
+     obj={
+        
+              name: String.fromCharCode(lineName),
+              data: [
+                { x: ranges[d], y: lineData[d] },
+               
+              ],
+            },
+
+
+     arr.push(obj)
+     lineName ++;
+     console.log(col)
+     col --;
+     d++;
+      }
+
+      const options = {
+          colors: ["#1A56DB", "#FDBA8C"],
+          series: [
+            {
+              name: "Organic",
+              data: [
+                { x: "Mon", y: 231 },
+                { x: "Tue", y: 122 },
+                { x: "Wed", y: 63 },
+                { x: "Thu", y: 421 },
+                { x: "Fri", y: 122 },
+                { x: "Sat", y: 323 },
+                { x: "Sun", y: 111 },
+              ],
+            },
+            {
+              name: "Social media",
+              data: [
+                { x: "Mon", y: 232 },
+                { x: "Tue", y: 113 },
+                { x: "Wed", y: 341 },
+                { x: "Thu", y: 224 },
+                { x: "Fri", y: 522 },
+                { x: "Sat", y: 411 },
+                { x: "Sun", y: 243 },
+              ],
+            },
+          ],
+          chart: {
+            type: "bar",
+            height: "320px",
+            fontFamily: "Inter, sans-serif",
+            toolbar: {
+              show: false,
+            },
+          },
+          plotOptions: {
+            bar: {
+              horizontal: false,
+              columnWidth: "70%",
+              borderRadiusApplication: "end",
+              borderRadius: 8,
+            },
+          },
+          tooltip: {
+            shared: true,
+            intersect: false,
+            style: {
+              fontFamily: "Inter, sans-serif",
+            },
+          },
+          states: {
+            hover: {
+              filter: {
+                type: "darken",
+                value: 1,
+              },
+            },
+          },
+          stroke: {
+            show: true,
+            width: 0,
+            colors: ["transparent"],
+          },
+          grid: {
+            show: false,
+            strokeDashArray: 4,
+            padding: {
+              left: 2,
+              right: 2,
+              top: -14
+            },
+          },
+          dataLabels: {
+            enabled: false,
+          },
+          legend: {
+            show: false,
+          },
+          xaxis: {
+            floating: false,
+            labels: {
+              show: true,
+              style: {
+                fontFamily: "Inter, sans-serif",
+                cssClass: 'text-xs font-normal fill-gray-500 dark:fill-gray-400'
+              }
+            },
+            axisBorder: {
+              show: false,
+            },
+            axisTicks: {
+              show: false,
+            },
+          },
+          yaxis: {
+            show: false,
+          },
+          fill: {
+            opacity: 1,
+          },
+        }   
+
+        if(document.getElementById("column-chart") && typeof ApexCharts !== 'undefined') {
+          const chart = new ApexCharts(document.getElementById("column-chart"), options);
+          chart.render();
+          chart.update();
+        }
+
+      }
+
+  // ApexCharts options and config
+  window.addEventListener("load", function() {
+   
+Chartt()
+      
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+
+</body>
+</html>
