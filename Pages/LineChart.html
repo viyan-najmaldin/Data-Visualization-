@@ -38,7 +38,7 @@
                           <a href="./PieChart.html" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Pie Chart</a>
                         </li>
                         <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Line Chart</a>
+                          <a href="./LineChart.html" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Line Chart</a>
                         </li>
                         <li>
                           <a href="./ColumnChart.html" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Column Chart</a>
@@ -405,16 +405,13 @@ let p= document.getElementById("print");
 closse=document.getElementById("close");
 let closee = ()=>{
   p.classList.add("none")
-        p.classList.remove("mystyle")
+  p.classList.remove("mystyle")
   
 }
      
 let Chartt = ()=> {
   let displyChart= document.querySelector(".chartt")
   displyChart.classList.remove("none")
-        p.classList.remove("none")
-        p.classList.add("mystyle")
-  
 
 let range=document.querySelectorAll('.range');
 ranges=  Object.values(range).map(i=>(i.value))
@@ -447,8 +444,18 @@ ranges=  Object.values(range).map(i=>(i.value))
       }
 
 
-     console.log(arr)
+    //  console.log(lineData.length)
 
+         //  p mean print
+         if(arr.data){
+         p.classList.remove("none")
+        p.classList.add("mystyle")      
+        }
+        else{
+            console.log(arr)
+            alert("please add the inputs")
+            location.reload();
+        } 
 
       let options = {
         chart: {
