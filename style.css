@@ -42,7 +42,7 @@
 
    .mystyle{
     animation-name: fadeIn;
-     background-color: rgba(17, 24, 39, 0.967); 
+     background-color: rgba(21, 29, 48, 0.967); 
   animation-duration: 2s;
     height: auto;
   display: block;
@@ -87,13 +87,28 @@
  .dele{
       padding-left: 10px;
       color: rgb(255, 132, 66); 
+      padding-right: 0;
     }
     
-    .dele:hover + .hide {
-      display: block;
+    .dele:hover::after {
+      content: "Delete";
       color: rgb(255, 132, 66);
-      font-size: 10px;
+      font-size: 8px;
       display: inline;
+    }
+
+    
+
+    .delet{
+  position: absolute;
+  top: -5px;
+  right: 5px;
+  color: #6c6767;
+  width: auto;
+    }
+
+    .delet:hover{
+      color: antiquewhite;
     }
 
     .line-btns{

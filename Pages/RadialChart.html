@@ -37,7 +37,7 @@
                   <div id="dropdownNavbar" class="z-10 hidden font-normal  divide-y divide-gray-100 rounded-lg shadow w-44    bg-gray-700    divide-gray-600">
                       <ul class="py-2 text-sm text-gray-500  text-gray-400" aria-labelledby="dropdownLargeButton">
                         <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Pie Chart</a>
+                          <a href="./PieChart.html" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Pie Chart</a>
                         </li>
                         <li>
                           <a href="./LineChart.html" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Line Chart</a>
@@ -49,7 +49,7 @@
                           <a href="./BarChart.html" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Bar Chart</a>
                         </li>
                         <li>
-                          <a href="./RadialChart.html" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Radial Chart</a>
+                          <a href="#" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Radial Chart</a>
                         </li>
                         <li>
                           <a href="#" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Donut Chart</a>
@@ -78,13 +78,13 @@
         <div class="flex m-6  ">
           <button class="bg-cyan-400 rounded-lg p-4 text-lg hover:duration-1000  font-serif hover:bg-orange-200 w-full py-4 px-64" id="vi">Create Chart</button>
         </div>
-        <h1 class="headd">Use your data to create Pie Chart </h1>
+        <h1 class="headd">Use your data to create Radial Chart </h1>
     
   <div class="flex">
     <!-- Chart -->
- <div class="max-w-lg w-full p-4 md:p-6" > 
+ <div class="max-w-xl w-full p-4 md:p-6" > 
   <div id="pdf">
-<div class="py-6" id="pie-chart"></div>  
+<div class="py-6" id="radial-chart"></div>  
     </div> 
   </div>  
 
@@ -93,24 +93,22 @@
  <form onsubmit="cc()">
   <div class="grid gap-4 m-6 md:grid-cols-3 h-14 " id="di" >
   
-    <div class="relative">
-      <input type="number"  class="x block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50    bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none    text-white    border-gray-600    focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="type the value" value="50" required />
-      <!-- <label for="floating_filled" class="absolute text-sm text-gray-500    text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:   text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"></label> -->
-      <input placeholder="type the name" type="text" class="y absolute text-sm w-[100%]  text-cyan-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600  bg-gray-50    bg-gray-700 peer-focus:   text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto  "  value="series-1" required>
-  </div>
+    <div class="relative ddiv1">
+      <input type="number"  class="x block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50    bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none    text-white    border-gray-600    focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="type the value" value="90" required />
+      <input placeholder="type the name" type="text" class="y absolute text-sm w-[90%]  text-cyan-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600  bg-gray-50    bg-gray-700 peer-focus:   text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto  "  value="series-1" required>
+      <input type="button" value="&#215" class="delet" onclick="deleteDiv(this)">
+    </div>
 
-  <div class="relative">
-    <input type="number"  class="x block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50    bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none    text-white    border-gray-600    focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " value="30" required/>
-    <!-- <label for="floating_filled" class="absolute text-sm text-gray-500    text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:   text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">series-2</label> -->
-    <input placeholder="type the name" type="text" class="y absolute text-sm w-[100%]  text-cyan-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 bg-gray-50    bg-gray-700 peer-focus:   text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto  " value="series-2" required>
-
+  <div class="relative ddiv2">
+    <input type="number"  class="x block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50    bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none    text-white    border-gray-600    focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " value="50" required/>
+    <input placeholder="type the name" type="text" class="y absolute text-sm w-[90%]  text-cyan-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 bg-gray-50    bg-gray-700 peer-focus:   text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto  " value="series-2" required>
+    <input type="button" value="&#215" class="delet" onclick="deleteDiv(this)">
 </div>
 
-<div class="relative">
-  <input type="number"  class="x block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50    bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none    text-white    border-gray-600    focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " value="20" required />
-  <!-- <label for="floating_filled" class="absolute text-sm text-gray-500    text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:   text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">series-2</label> -->
-  <input placeholder="type the name" type="text" class="y absolute text-sm w-[100%] text-cyan-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600  bg-gray-50  bg-gray-700 peer-focus:   text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto  " value="series-3" required>
-
+<div class="relative ddiv3">
+  <input type="number"  class="x block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50    bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none    text-white    border-gray-600    focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " value="75" required />
+  <input placeholder="type the name" type="text" class="y absolute text-sm w-[90%] text-cyan-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600  bg-gray-50  bg-gray-700 peer-focus:   text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto  " value="series-3" required>
+  <input type="button" value="&#215" class="delet" onclick="deleteDiv(this)">
 </div>
   
     
@@ -161,6 +159,9 @@
                          </svg>
                    </button>
                    <ul id="dropdown-example" class="hidden ">
+                    <li>
+                        <a href="./PieChart.html" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group text-white hover:bg-gray-700">Pie Chart</a>
+                     </li>
                          <li>
                             <a href="./LineChart.html" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group text-white hover:bg-gray-700">Line Chart</a>
                          </li>
@@ -170,9 +171,7 @@
                          <li>
                           <a href="./BarChart.html" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group text-white hover:bg-gray-700">Bar Chart</a>
                        </li>
-                       <li>
-                        <a href="./RadialChart.html" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group text-white hover:bg-gray-700">Radial Chart</a>
-                     </li>
+                       
                      <li>
                       <a href="#" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group text-white hover:bg-gray-700">Donut Chart</a>
                    </li>
@@ -206,7 +205,7 @@
             </div>
              
              <div class="flex justify-around"> 
-             <div class="text-sm"> You may want to print your pie chart  click here : </div>
+             <div class="text-sm"> You may want to print your Radial chart  click here : </div>
              <div > 
                <button  onclick="printDiv('pdf','Title')" type="button" class="flex justify-center items-center w-[42px] h-[42px] text-gray-500 hover:text-gray-900 rounded-full border border-gray-200    border-gray-600 shadow-sm    hover:text-white    text-gray-400 hover:bg-gray-50    bg-gray-700    hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none    focus:ring-gray-400">
                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -266,25 +265,30 @@ function printDiv(divId,
         item.setAttribute("type", "number");
         item2.setAttribute("type", "text");
         item.setAttribute("value", "0");
-        item.setAttribute("id", "hmm");
        item.setAttribute("placeholder", " ");
        item.setAttribute("required", "");
        item.classList.add("x","block", "rounded-t-lg","px-2.5","pb-2.5","pt-5","w-full","text-sm","text-gray-900","bg-gray-50","bg-gray-700","border-0","border-b-2","border-gray-300","appearance-none","text-white","border-gray-600","focus:border-blue-500","focus:outline-none","focus:ring-0","focus:border-blue-600","peer");
-        item2.setAttribute("for", "hmm");
-        itemm.classList.add("relative");
+        itemm.classList.add("relative","ddiv"+series);
         item2.setAttribute("value", "series-"+series);
         item2.setAttribute("placeholder","type the name")
         item2.setAttribute("required", "");
-        // item2.innerText= "series-"+series;
+    
+        itemm.innerHTML='<input type="button" value="&#215" class="delet" onclick="deleteDiv(this)">'
         itemm.appendChild(item);
         itemm.appendChild(item2);
         const element = document.getElementById("di");
-        item2.classList.add("y","absolute", "w-[100%]","text-sm", "text-cyan-400", "duration-300", "transform","-translate-y-4", "scale-75", "top-4", "z-10", "origin-[0]", "start-2.5", "peer-focus:text-blue-600", "peer-focus:text-blue-500", "peer-placeholder-shown:scale-100", "peer-placeholder-shown:translate-y-0", "peer-focus:scale-75", "peer-focus:-translate-y-4", "rtl:peer-focus:translate-x-1/4","bg-gray-50","bg-gray-700","border-0", "rtl:peer-focus:left-auto")
+        item2.classList.add("y","absolute", "w-[90%]","text-sm", "text-cyan-400", "duration-300", "transform","-translate-y-4", "scale-75", "top-4", "z-10", "origin-[0]", "start-2.5", "peer-focus:text-blue-600", "peer-focus:text-blue-500", "peer-placeholder-shown:scale-100", "peer-placeholder-shown:translate-y-0", "peer-focus:scale-75", "peer-focus:-translate-y-4", "rtl:peer-focus:translate-x-1/4","bg-gray-50","bg-gray-700","border-0", "rtl:peer-focus:left-auto")
 
         element.appendChild(itemm);
         
       }
 
+      function deleteDiv(r) {
+        let del = r.parentNode;
+        del.remove();
+        }
+
+        /// p mean print
 let p= document.getElementById("print");
 closse=document.getElementById("close");
 let closee = ()=>{
@@ -294,9 +298,7 @@ let closee = ()=>{
 }
      let Chartt = ()=> {
         
-        // let p= document.getElementById("print");
-        p.classList.remove("none")
-        p.classList.add("mystyle")
+     
          const getChartOptions = () => {
          let x=document.querySelectorAll('.x');
                 console.log(x.value)
@@ -314,44 +316,76 @@ let closee = ()=>{
              let y=document.querySelectorAll('.y');
        
        let leb;
-       console.log(y[0].value)
+    //    console.log(y[0].value)
        leb=  Object.values(y).map(i=>(i.value))
           console.log(leb) 
+          console.log("---------------")
+           console.log(we)
              
+       //  p mean print
+       if(we.length !== 0){
+         p.classList.remove("none")
+        p.classList.add("mystyle")      
+        }
+        else{
+            console.log(we)
+            alert("please add the inputs")
+        } 
+         
            return {
                series: we,
-               colors: ["#1C64F2", "#16BDCA", "#9061F9","#ff9933", "#ff66cc","#99ff33" ,"#666699"],
+               colors: ["#1C64F2","#ffff99","#ff66cc","#16BDCA","#9061F9","#ff9933" ,"#666699"],
                chart: {
-                 height: 620,
+                 height: "450px",
                  width: "100%",
-                 type: "pie",
+                 type: "radialBar",
+                 sparkline: {
+              enabled: true,
+            },
                },
                stroke: {
                  colors: ["white"],
                  lineCap: "",
                },
+               
                plotOptions: {
-                 pie: {
-                   labels: {
-                     show: true,
-                   },
-                   size: "100%",
-                   dataLabels: {
-                     offset: -25
-                   }
-                 },
+                radialBar: {
+              track: {
+                background: '#374151',
+              },
+              dataLabels: {
+                show: true,
+              },
+              hollow: {
+                margin: 0,
+                size: "32%",
+              }
+            },
+            
                },
                 labels: leb,
+                
                dataLabels: {
                  enabled: true,
                  style: {
                    fontFamily: "Inter, sans-serif",
+            cssClass: 'fill-red-500'
+
                  },
                },
                legend: {
-                 position: "bottom",
-                 fontFamily: "Inter, sans-serif",
-               },
+            show: true,
+            position: "bottom",
+            fontFamily: "Inter, sans-serif",
+          },
+
+          tooltip: {
+            enabled: true,
+            x: {
+              show: false,
+            },
+            
+          },
                yaxis: {
                  labels: {
                    formatter: function (value) {
@@ -375,11 +409,12 @@ let closee = ()=>{
              }
            }
      
-           if (document.getElementById("pie-chart") && typeof ApexCharts !== 'undefined') {
-             const chart = new ApexCharts(document.getElementById("pie-chart"), getChartOptions());
+           if (document.getElementById("radial-chart") && typeof ApexCharts !== 'undefined') {
+             const chart = new ApexCharts(document.getElementById("radial-chart"), getChartOptions());
              chart.render();
              chart.update();
            }
+
        }
 
      let vi= document.getElementById('vi')
@@ -390,8 +425,6 @@ let closee = ()=>{
    
  let cc = ()=>{
   event.preventDefault()
-  // formm.addEventListener('submit', (event) => {
-      console.log("edddddddddddd")
      Chartt()
     // });
  } 

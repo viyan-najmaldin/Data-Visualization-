@@ -44,10 +44,10 @@
                           <a href="./ColumnChart.html" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Column Chart</a>
                         </li>
                         <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Bar Chart</a>
+                          <a href="./BarChart.html" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Bar Chart</a>
                         </li>
                         <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Radial Chart</a>
+                          <a href="./RadialChart.html" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Radial Chart</a>
                         </li>
                         <li>
                           <a href="#" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Donut Chart</a>
@@ -79,7 +79,7 @@
       <h1 class="headd">Use your data to create Line Chart </h1>
   
         <!-- Chart -->
- <div class="chartt px-4 my-6 max-w-4xl bg-gray-900 rounded-lg none w-full "> 
+ <div class="chartt px-4 my-6 py-6 max-w-4xl bg-gray-900 rounded-lg none w-full "> 
     <div id="pdf">
   <div class="py-4" id="line-chart"></div>  
       </div> 
@@ -112,8 +112,7 @@
         <tbody id="tbody">
             <tr class=" border-b  bg-gray-800   border-gray-700 ">
                 <td >
-                  <input type="button" value="x" class="dele" onclick="deleteRow(this)">
-                  <span class="hide">Delete</span>
+                  <button class="dele" onclick="deleteRow(this)">x </button>
               </td>
                <th scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap text-white">
                     <input type="text" class="range range1 bg-gray-800 text-center text-lg text-white" value="1 Feb" placeholder="Type the Range" required> 
@@ -129,8 +128,7 @@
            
             <tr class=" border-b bg-gray-800 border-gray-700 ">
                  <td >
-                  <input type="button" value="x" class="dele" onclick="deleteRow(this)">
-                  <span class="hide">Delete</span>
+                  <button class="dele" onclick="deleteRow(this)">x </button>
               </td>
                 <th scope="row" class="px-2 py-2  font-medium text-gray-900 whitespace-nowrap    text-white">
                     <input type="text" class="range range2 bg-gray-800 text-center text-lg text-white" value="2 Feb" placeholder="Type the Range" required> 
@@ -146,8 +144,7 @@
             
             <tr class=" border-b    bg-gray-800    border-gray-700">
               <td >
-                <input type="button" value="x" class="dele" onclick="deleteRow(this)">
-                <span class="hide">Delete</span>
+                <button class="dele" onclick="deleteRow(this)">x </button>
             </td> 
               <th scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap    text-white">
                   <input type="text" class="range range3 bg-gray-800 text-center text-lg text-white" value="3 Feb" placeholder="Type the Range" required> 
@@ -164,8 +161,7 @@
 
           <tr class=" border-b    bg-gray-800    border-gray-700 ">
             <td >
-              <input type="button" value="x" class="dele" onclick="deleteRow(this)">
-              <span class="hide">Delete</span>
+              <button class="dele" onclick="deleteRow(this)">x </button>
           </td>   
             <th scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap    text-white">
                 <input type="text" class="range range4 bg-gray-800 text-center text-lg text-white" value="4 Feb" placeholder="Type the Range" required> 
@@ -180,8 +176,7 @@
 
         <tr class=" border-b    bg-gray-800    border-gray-700 ">
             <td >
-            <input type="button" value="x" class="dele" onclick="deleteRow(this)">
-            <span class="hide">Delete</span>
+              <button class="dele" onclick="deleteRow(this)">x </button>
         </td>   
           <th scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap  text-white">
               <input type="text" class="range range5 bg-gray-800 text-center text-lg text-white" value="5 Feb" placeholder="Type the Range" required> 
@@ -197,8 +192,7 @@
 
       <tr class=" border-b  bg-gray-800  border-gray-700 "> 
         <td >
-          <input type="button" value="x" class="dele" id="dele" onclick="deleteRow(this)">
-          <span class="hide">Delete</span>
+          <button class="dele" onclick="deleteRow(this)">x </button>
       </td> 
         <th scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap    text-white">
          
@@ -223,7 +217,9 @@
       <input  type="button" class="line-btns"  id="line-btn2" name="add" value="Add Row" onclick="addRow()">
       <button type="button" class="line-btns"  onclick="addColumn()">add column</button>
       <input type="button" class="line-btns"   id="line-btn3" onclick="printDiv('pdf','Title')" name="print" value="Print" >
-      <input id="line-btn1" class="line-btns" type="submit"  name="pew pew" value="Create Chart">
+    
+      <input id="line-btn1" class="line-btns"   type="submit"  name="pew pew" value="Create Chart">
+    
     </div>
   </form>
 </div>
@@ -236,13 +232,13 @@
 
  </div>
 
- <div class="">
+ <div class="border-l border-gray-700">
   <aside id="sidebar-multi-level-sidebar" class=" w-60 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
     <div class="h-full px-3 py-4 overflow-y-auto bg-gray-800">
        <ul class="space-y-2 text-xs">
           <li>
-             <a href="#table" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-              <svg class="w-[12px] h-[12px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
+             <a href="#table" class="flex items-center p-2  rounded-lg text-white  hover:bg-gray-700 group">
+              <svg class="w-[12px] h-[12px] text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1v14h16m0-9-3-2-3 5-3-2-3 4"/>
               </svg>
                 <span class="ms-3">Create Chart</span>
@@ -250,7 +246,7 @@
           </li>
           <li>
              <button type="button" class="flex items-center w-full p-2 transition duration-75 rounded-lg group text-white hover:bg-gray-700" aria-controls="dropdown-example" data-collapse-toggle="dropdown-example">
-              <svg class="w-[12px] h-[12px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"fill="none" viewBox="0 0 17 18">
+              <svg class="w-[12px] h-[12px] text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"fill="none" viewBox="0 0 17 18">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 12v5m5-9v9m5-5v5m5-9v9M1 7l5-6 5 6 5-6"/>
               </svg>
                    <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Choose another type</span>
@@ -260,17 +256,25 @@
              </button>
              <ul id="dropdown-example" class="hidden ">
                    <li>
-                      <a href="./PieChart.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Pie Chart</a>
+                      <a href="./PieChart.html" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group text-white hover:bg-gray-700">Pie Chart</a>
                    </li>
                    <li>
-                      <a href="./ColumnChart.html" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Column Chart</a>
+                      <a href="./ColumnChart.html" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group text-white hover:bg-gray-700">Column Chart</a>
                    </li>
-                   
+                   <li>
+                    <a href="./BarChart.html" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group text-white hover:bg-gray-700">Bar Chart</a>
+                 </li>
+                 <li>
+                  <a href="./RadialChart.html" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group text-white hover:bg-gray-700">Radial Chart</a>
+               </li>
+               <li>
+                <a href="#" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group text-white hover:bg-gray-700">Donut Chart</a>
+             </li>
              </ul>
           </li>
           <li>
-             <a href="#" onclick="printDiv('pdf','Title')"  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"> 
-              <svg class="w-[12px] h-[12px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 19">
+             <a href="#" onclick="printDiv('pdf','Title')"  class="flex items-center p-2 rounded-lg text-white hover:bg-gray-700 group"> 
+              <svg class="w-[12px] h-[12px] text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 19">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15h.01M4 12H2a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-3M9.5 1v10.93m4-3.93-4 4-4-4"/>
               </svg>
                 <span class="flex-1 ms-3 whitespace-nowrap">Print</span>
@@ -292,7 +296,7 @@
       </div>
        
        <div class="flex justify-around"> 
-       <div class="text-sm"> You may want to print your pie chart  click here : </div>
+       <div class="text-sm"> You may want to print your Line chart  click here : </div>
        <div > 
          <button  onclick="printDiv('pdf','Title')" type="button" class="flex justify-center items-center w-[42px] h-[42px] text-gray-500 hover:text-gray-900 rounded-full border border-gray-200    border-gray-600 shadow-sm    hover:text-white    text-gray-400 hover:bg-gray-50    bg-gray-700    hover:bg-gray-600 focus:ring-4 focus:ring-gray-300 focus:outline-none    focus:ring-gray-400">
          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
@@ -378,7 +382,7 @@ const addRow = () => {
       else if (i==1){
      inputs.setAttribute("class","range"+rrows+" range bg-gray-800 text-center text-lg text-white")
      inputs.setAttribute("type","text")
-      inputs.setAttribute("placeholder","Type the Ralue");
+      inputs.setAttribute("placeholder","Type the Range");
       inputs.setAttribute("required","")
       cell.appendChild(inputs)
     }
@@ -448,7 +452,7 @@ ranges=  Object.values(range).map(i=>(i.value))
 
       let options = {
         chart: {
-          height: "100%",
+          height: "150%",
           maxWidth: "100%",
           type: "line",
           fontFamily: "Inter, sans-serif",
@@ -456,7 +460,7 @@ ranges=  Object.values(range).map(i=>(i.value))
             enabled: false,
           },
           toolbar: {
-            show: false,
+            show: true,
           },
         },
         tooltip: {
@@ -480,10 +484,11 @@ ranges=  Object.values(range).map(i=>(i.value))
             top: -26
           },
         },
+        colors: ["#1C64F2","#9061F9","#ff9933", "#16BDCA", "#ff66cc","#99ff33" ,"#666699"],
         series:  arr 
         ,
         legend: {
-          show: false
+          show: true
         },
         stroke: {
           curve: 'smooth'
@@ -505,7 +510,7 @@ ranges=  Object.values(range).map(i=>(i.value))
           },
         },
         yaxis: {
-          show: false,
+          show: true,
         },
   
       }
