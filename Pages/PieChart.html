@@ -52,7 +52,7 @@
                           <a href="./RadialChart.html" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Radial Chart</a>
                         </li>
                         <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Donut Chart</a>
+                          <a href="./DonutChart.html" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Donut Chart</a>
                         </li>
                       </ul>
                       <!-- <div class="py-1">
@@ -93,24 +93,22 @@
  <form onsubmit="cc()">
   <div class="grid gap-4 m-6 md:grid-cols-3 h-14 " id="di" >
   
-    <div class="relative">
-      <input type="number"  class="x block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50    bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none    text-white    border-gray-600    focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="type the value" value="50" required />
-      <!-- <label for="floating_filled" class="absolute text-sm text-gray-500    text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:   text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto"></label> -->
-      <input placeholder="type the name" type="text" class="y absolute text-sm w-[100%]  text-cyan-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600  bg-gray-50    bg-gray-700 peer-focus:   text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto  "  value="series-1" required>
-  </div>
+    <div class="relative ddiv1">
+      <input type="number"  class="x block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50    bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none    text-white    border-gray-600    focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder="type the value" value="90" required />
+      <input placeholder="type the name" type="text" class="y absolute text-sm w-[90%]  text-cyan-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600  bg-gray-50    bg-gray-700 peer-focus:   text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto  "  value="series-1" required>
+      <input type="button" value="&#215" class="delet" onclick="deleteDiv(this)">
+    </div>
 
-  <div class="relative">
-    <input type="number"  class="x block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50    bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none    text-white    border-gray-600    focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " value="30" required/>
-    <!-- <label for="floating_filled" class="absolute text-sm text-gray-500    text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:   text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">series-2</label> -->
-    <input placeholder="type the name" type="text" class="y absolute text-sm w-[100%]  text-cyan-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 bg-gray-50    bg-gray-700 peer-focus:   text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto  " value="series-2" required>
-
+  <div class="relative ddiv2">
+    <input type="number"  class="x block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50    bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none    text-white    border-gray-600    focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " value="50" required/>
+    <input placeholder="type the name" type="text" class="y absolute text-sm w-[90%]  text-cyan-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 bg-gray-50    bg-gray-700 peer-focus:   text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto  " value="series-2" required>
+    <input type="button" value="&#215" class="delet" onclick="deleteDiv(this)">
 </div>
 
-<div class="relative">
-  <input type="number"  class="x block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50    bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none    text-white    border-gray-600    focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " value="20" required />
-  <!-- <label for="floating_filled" class="absolute text-sm text-gray-500    text-gray-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600 peer-focus:   text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">series-2</label> -->
-  <input placeholder="type the name" type="text" class="y absolute text-sm w-[100%] text-cyan-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600  bg-gray-50  bg-gray-700 peer-focus:   text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto  " value="series-3" required>
-
+<div class="relative ddiv3">
+  <input type="number"  class="x block rounded-t-lg px-2.5 pb-2.5 pt-5 w-full text-sm text-gray-900 bg-gray-50    bg-gray-700 border-0 border-b-2 border-gray-300 appearance-none    text-white    border-gray-600    focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " value="75" required />
+  <input placeholder="type the name" type="text" class="y absolute text-sm w-[90%] text-cyan-400 duration-300 transform -translate-y-4 scale-75 top-4 z-10 origin-[0] start-2.5 peer-focus:text-blue-600  bg-gray-50  bg-gray-700 peer-focus:   text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto  " value="series-3" required>
+  <input type="button" value="&#215" class="delet" onclick="deleteDiv(this)">
 </div>
   
     
@@ -174,7 +172,7 @@
                         <a href="./RadialChart.html" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group text-white hover:bg-gray-700">Radial Chart</a>
                      </li>
                      <li>
-                      <a href="#" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group text-white hover:bg-gray-700">Donut Chart</a>
+                      <a href="./DonutChart.html" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group text-white hover:bg-gray-700">Donut Chart</a>
                    </li>
                          
                    </ul>
@@ -266,24 +264,28 @@ function printDiv(divId,
         item.setAttribute("type", "number");
         item2.setAttribute("type", "text");
         item.setAttribute("value", "0");
-        item.setAttribute("id", "hmm");
        item.setAttribute("placeholder", " ");
        item.setAttribute("required", "");
        item.classList.add("x","block", "rounded-t-lg","px-2.5","pb-2.5","pt-5","w-full","text-sm","text-gray-900","bg-gray-50","bg-gray-700","border-0","border-b-2","border-gray-300","appearance-none","text-white","border-gray-600","focus:border-blue-500","focus:outline-none","focus:ring-0","focus:border-blue-600","peer");
-        item2.setAttribute("for", "hmm");
-        itemm.classList.add("relative");
+        itemm.classList.add("relative","ddiv"+series);
         item2.setAttribute("value", "series-"+series);
         item2.setAttribute("placeholder","type the name")
         item2.setAttribute("required", "");
-        // item2.innerText= "series-"+series;
+    
+        itemm.innerHTML='<input type="button" value="&#215" class="delet" onclick="deleteDiv(this)">'
         itemm.appendChild(item);
         itemm.appendChild(item2);
         const element = document.getElementById("di");
-        item2.classList.add("y","absolute", "w-[100%]","text-sm", "text-cyan-400", "duration-300", "transform","-translate-y-4", "scale-75", "top-4", "z-10", "origin-[0]", "start-2.5", "peer-focus:text-blue-600", "peer-focus:text-blue-500", "peer-placeholder-shown:scale-100", "peer-placeholder-shown:translate-y-0", "peer-focus:scale-75", "peer-focus:-translate-y-4", "rtl:peer-focus:translate-x-1/4","bg-gray-50","bg-gray-700","border-0", "rtl:peer-focus:left-auto")
+        item2.classList.add("y","absolute", "w-[90%]","text-sm", "text-cyan-400", "duration-300", "transform","-translate-y-4", "scale-75", "top-4", "z-10", "origin-[0]", "start-2.5", "peer-focus:text-blue-600", "peer-focus:text-blue-500", "peer-placeholder-shown:scale-100", "peer-placeholder-shown:translate-y-0", "peer-focus:scale-75", "peer-focus:-translate-y-4", "rtl:peer-focus:translate-x-1/4","bg-gray-50","bg-gray-700","border-0", "rtl:peer-focus:left-auto")
 
         element.appendChild(itemm);
         
       }
+
+      function deleteDiv(r) {
+        let del = r.parentNode;
+        del.remove();
+        }
 
 let p= document.getElementById("print");
 closse=document.getElementById("close");

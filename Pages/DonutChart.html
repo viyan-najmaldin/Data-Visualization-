@@ -49,10 +49,10 @@
                           <a href="./BarChart.html" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Bar Chart</a>
                         </li>
                         <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Radial Chart</a>
+                          <a href="./RadialChart.html" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Radial Chart</a>
                         </li>
                         <li>
-                          <a href="./DonutChart.html" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Donut Chart</a>
+                          <a href="#" class="block px-4 py-2 hover:bg-gray-100    hover:bg-gray-600    hover:text-white">Donut Chart</a>
                         </li>
                       </ul>
                       <!-- <div class="py-1">
@@ -173,7 +173,7 @@
                        </li>
                        
                      <li>
-                      <a href="./DonutChart.html" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group text-white hover:bg-gray-700">Donut Chart</a>
+                      <a href="./RadialChart.html" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group text-white hover:bg-gray-700">Radial Chart</a>
                    </li>
                          
                    </ul>
@@ -333,82 +333,86 @@ let closee = ()=>{
         } 
          
            return {
-               series: we,
-               colors: ["#1C64F2","#ffff99","#ff66cc","#16BDCA","#9061F9","#ff9933" ,"#666699"],
-               chart: {
-                 height: "450px",
-                 width: "100%",
-                 type: "radialBar",
-                 sparkline: {
-              enabled: true,
-            },
-               },
-               stroke: {
-                 colors: ["white"],
-                 lineCap: "",
-               },
-               
-               plotOptions: {
-                radialBar: {
-              track: {
-                background: '#374151',
+          series: we,
+          colors: ["#1C64F2", "#16BDCA", "#FDBA8C", "#E74694"],
+          chart: {
+            height: 400,
+            width: "100%",
+            type: "donut",
+          },
+          stroke: {
+            colors: ["transparent"],
+            lineCap: "",
+          },
+          plotOptions: {
+            pie: {
+              donut: {
+                labels: {
+                  show: true,
+                  name: {
+                    show: true,
+                    fontFamily: "Inter, sans-serif",
+                    offsetY: 20,
+                  },
+                  total: {
+                    showAlways: false,
+                    show: false,
+                    label: "Total",
+                    fontFamily: "Inter, sans-serif",
+                    formatter: function (w) {
+                      const sum = w.globals.seriesTotals.reduce((a, b) => {
+                        return a + b
+                      }, 0)
+                      return `${sum}`
+                    },
+                  },
+                  value: {
+                    show: true,
+                    fontFamily: "Inter, sans-serif",
+                    offsetY: -20,
+                    formatter: function (value) {
+                      return value 
+                    },
+                  },
+                },
+                size: "50%",
               },
-              dataLabels: {
-                show: true,
-              },
-              hollow: {
-                margin: 0,
-                size: "32%",
-              }
             },
-            
-               },
-                labels: leb,
-                
-               dataLabels: {
-                 enabled: true,
-                 style: {
-                   fontFamily: "Inter, sans-serif",
-            cssClass: 'fill-red-500'
-
-                 },
-               },
-               legend: {
-            show: true,
+          },
+          grid: {
+            padding: {
+              top: -2,
+            },
+          },
+          labels: leb,
+          dataLabels: {
+            enabled: false,
+          },
+          legend: {
             position: "bottom",
             fontFamily: "Inter, sans-serif",
           },
-
-          tooltip: {
-            enabled: true,
-            x: {
+          yaxis: {
+            labels: {
+              formatter: function (value) {
+                return value 
+              },
+            },
+          },
+          xaxis: {
+            labels: {
+              formatter: function (value) {
+                return value 
+              },
+            },
+            axisTicks: {
               show: false,
             },
-            
+            axisBorder: {
+              show: false,
+            },
           },
-               yaxis: {
-                 labels: {
-                   formatter: function (value) {
-                     return value + "%"
-                   },
-                 },
-               },
-               xaxis: {
-                 labels: {
-                   formatter: function (value) {
-                     return value  + "%"
-                   },
-                 },
-                 axisTicks: {
-                   show: false,
-                 },
-                 axisBorder: {
-                   show: false,
-                 },
-               },
-             }
-           }
-     
+           }}
            if (document.getElementById("radial-chart") && typeof ApexCharts !== 'undefined') {
              const chart = new ApexCharts(document.getElementById("radial-chart"), getChartOptions());
              chart.render();

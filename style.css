@@ -19,7 +19,7 @@
   }
 
   .headd{
-    font-size: xx-large;
+    font-size: x-large;
     color: rgb(233, 230, 125);
     text-align: center;
 
@@ -64,13 +64,13 @@
 
       .mystyle h1{
       display: block !important;
-      font-size: x-large;
+      font-size: large;
       color: rgb(255, 134, 91);
      }
     
 
      #table, table tr input{
-        border-radius: 20px !important;
+        border-radius: 10px !important;
       }
       #table  #tbody{
         border: cadetblue 2px solid !important;

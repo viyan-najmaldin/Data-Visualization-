@@ -49,7 +49,7 @@
                           <a href="./RadialChart.html" class="block px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white">Radial Chart</a>
                         </li>
                         <li>
-                          <a href="#" class="block px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white">Donut Chart</a>
+                          <a href="./DonutChart.html" class="block px-4 py-2 hover:bg-gray-100 hover:bg-gray-600 hover:text-white">Donut Chart</a>
                         </li>
                       </ul>
                       <!-- <div class="py-1">
@@ -69,11 +69,11 @@
       </nav>
    
       <div class="flex justify-between">
-        <div class="flex flex-col justify-center items-center ml-28">
+        <div class="flex flex-col justify-center items-center ml-16">
        
        
            <div class="flex m-6  ">
-               <button class="bg-cyan-400 rounded-lg p-4 text-lg hover:duration-1000  font-serif hover:bg-orange-200 w-full py-4 px-64" id="vi">Create Chart</button>
+               <button class="bg-cyan-400 rounded-lg p-4  hover:duration-1000  font-serif hover:bg-orange-200 w-full py-4 px-64" id="vi">Create Chart</button>
              </div>
              <h1 class="headd">Use your data to create Bar Chart </h1>
          
@@ -90,69 +90,71 @@
        <div class=" shadow-md sm:rounded-lg m-6 mb-14">
          <form class="border-none shadow-none" onsubmit="cc()">
           
-           <div class="overflow-auto relative max-w-3xl w-full">
+           <div class="overflow-auto relative max-w-[850px] w-full">
         <table class="table-auto text-sm rtl:text-right bg-indigo-400 text-gray-400 " id="table">
              
                <thead class="text-xs text-gray-700  text-gray-400 ">
                    <tr>
                      <th class="px-5"></th> 
        
-                       <th scope="col" class="px-2  py-2 text-lg">
+                       <th scope="col" class="px-2  py-2 ">
                          Range
                        </th>
                        <th scope="col" class=" py-2">
-                         <input type="text" class="A coll text-lg hover:text-white text-center bg-indigo-400 hover:bg-gray-800" value="Column A" placeholder="Column A" required>
+                         <input type="text" class="A coll  hover:text-white text-center bg-indigo-400 hover:bg-gray-800" value="Column A" placeholder="Column A" required>
                      </th>
                        <th scope="col" class=" py-2">
-                         <input type="text" class="B coll  text-center text-lg hover:text-white bg-indigo-400 hover:bg-gray-800" value="Column B" placeholder="Column B" required>
+                         <input type="text" class="B coll  text-center  hover:text-white bg-indigo-400 hover:bg-gray-800" value="Column B" placeholder="Column B" required>
                      </th>
                    </tr>
                </thead>
                <tbody id="tbody">
                    <tr class=" border-b  bg-gray-800   border-gray-700 ">
                        <td >
-                        <button class="dele" onclick="deleteRow(this)">x </button>
+                        <input type="button" value="&#215" class="dele" onclick="deleteRow(this)">
                      </td>
-                      <th scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap text-white">
-                           <input type="text" class="range range1 bg-gray-800 text-center text-lg text-white" value="Sat" placeholder="Type the Range" required> 
-                       </th>
+                      <td scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap text-white">
+                           <input type="text" class="range range1 bg-gray-800 text-center  text-white" value="Sat" placeholder="Type the Range" required> 
+                       </td>
                        <td class="px-2 py-2">
-                         <input type="number" class="A-value bg-gray-800 text-center text-lg text-white" value="5" placeholder="Type the value" required> 
+                         <input type="number" class="A-value bg-gray-800 text-center  text-white" value="5" placeholder="Type the value" required> 
                      </td>
                        <td class="px-2 py-2">
-                           <input type="number" class="B-value bg-gray-800 text-center text-lg text-white" value="10" placeholder="Type the value" required> 
+                           <input type="number" class="B-value bg-gray-800 text-center  text-white" value="10" placeholder="Type the value" required> 
                        </td>
                        
                    </tr>
                   
                    <tr class=" border-b bg-gray-800 border-gray-700 ">
                         <td >
-                        <button class="dele" onclick="deleteRow(this)">x </button>
+                        <input type="button" value="&#215" class="dele" onclick="deleteRow(this)">
+
                      </td>
-                       <th scope="row" class="px-2 py-2  font-medium text-gray-900 whitespace-nowrap    text-white">
-                           <input type="text" class="range range2 bg-gray-800 text-center text-lg text-white" value="Sun" placeholder="Type the Range" required> 
-                       </th>
-                       <td class="px-2 py-2">
-                           <input type="number" class="A-value bg-gray-800 text-center text-lg text-white" value="13" placeholder="Type the value" required> 
+                       <td scope="row" class="px-2 py-2  font-medium text-gray-900 whitespace-nowrap    text-white">
+                           <input type="text" class="range range2 bg-gray-800 text-center  text-white" value="Sun" placeholder="Type the Range" required> 
                        </td>
                        <td class="px-2 py-2">
-                           <input type="number" class="B-value bg-gray-800 text-center text-lg text-white" value="85" placeholder="Type the value" required> 
+                           <input type="number" class="A-value bg-gray-800 text-center  text-white" value="13" placeholder="Type the value" required> 
+                       </td>
+                       <td class="px-2 py-2">
+                           <input type="number" class="B-value bg-gray-800 text-center  text-white" value="85" placeholder="Type the value" required> 
                        </td>
                      
                    </tr>
                    
                    <tr class=" border-b    bg-gray-800    border-gray-700">
                      <td >
-                        <button class="dele" onclick="deleteRow(this)">x </button>
+                        <input type="button" value="&#215" class="dele" onclick="deleteRow(this)">
+
                    </td> 
-                     <th scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap    text-white">
-                         <input type="text" class="range range3 bg-gray-800 text-center text-lg text-white" value="Mon" placeholder="Type the Range" required> 
-                     </th>
-                     <td class="px-2 py-2">
-                         <input type="number" class="A-value bg-gray-800 text-center text-lg text-white" value="53" placeholder="Type the value" required> 
+                     <td scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap    text-white">
+                         <input type="text" class="range range3 bg-gray-800 text-center  text-white" value="Mon" placeholder="Type the Range" required> 
                      </td>
                      <td class="px-2 py-2">
-                         <input type="number" class="B-value bg-gray-800 text-center text-lg text-white" value="55" placeholder="Type the value" required> 
+                         <input type="number" class="A-value bg-gray-800 text-center  text-white" value="53" placeholder="Type the value" required> 
+                     </td>
+                     <td class="px-2 py-2">
+                         <input type="number" class="B-value bg-gray-800 text-center  text-white" value="55" placeholder="Type the value" required> 
                      </td>  
                      
                      
@@ -160,48 +162,51 @@
        
                  <tr class=" border-b    bg-gray-800    border-gray-700 ">
                    <td >
-                    <button class="dele" onclick="deleteRow(this)">x </button>
+                    <input type="button" value="&#215" class="dele" onclick="deleteRow(this)">
+
                  </td>   
-                   <th scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap    text-white">
-                       <input type="text" class="range range4 bg-gray-800 text-center text-lg text-white" value="Tue" placeholder="Type the Range" required> 
-                   </th>
-                   <td class="px-2 py-2">
-                       <input type="number" class="A-value bg-gray-800 text-center text-lg text-white" value="43" placeholder="Type the value" required> 
+                   <td scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap    text-white">
+                       <input type="text" class="range range4 bg-gray-800 text-center  text-white" value="Tue" placeholder="Type the Range" required> 
                    </td>
                    <td class="px-2 py-2">
-                       <input type="number" class="B-value bg-gray-800 text-center text-lg text-white" value="45" placeholder="Type the value" required> 
+                       <input type="number" class="A-value bg-gray-800 text-center  text-white" value="43" placeholder="Type the value" required> 
+                   </td>
+                   <td class="px-2 py-2">
+                       <input type="number" class="B-value bg-gray-800 text-center  text-white" value="45" placeholder="Type the value" required> 
                    </td>   
                </tr>
        
                <tr class=" border-b    bg-gray-800    border-gray-700 ">
                    <td >
-                    <button class="dele" onclick="deleteRow(this)">x </button>
+                    <input type="button" value="&#215" class="dele" onclick="deleteRow(this)">
+
                </td>   
-                 <th scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap  text-white">
-                     <input type="text" class="range range5 bg-gray-800 text-center text-lg text-white" value="Wed" placeholder="Type the Range" required> 
-                 </th>
-                 <td class="px-2 py-2">
-                     <input type="number" class="A-value bg-gray-800 text-center text-lg text-white" value="23" placeholder="Type the value" required> 
+                 <td scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap  text-white">
+                     <input type="text" class="range range5 bg-gray-800 text-center  text-white" value="Wed" placeholder="Type the Range" required> 
                  </td>
                  <td class="px-2 py-2">
-                     <input type="number" class="B-value bg-gray-800 text-center text-lg text-white" value="65" placeholder="Type the value" required> 
+                     <input type="number" class="A-value bg-gray-800 text-center  text-white" value="23" placeholder="Type the value" required> 
+                 </td>
+                 <td class="px-2 py-2">
+                     <input type="number" class="B-value bg-gray-800 text-center  text-white" value="65" placeholder="Type the value" required> 
                  </td>  
                
              </tr>
        
              <tr class=" border-b  bg-gray-800  border-gray-700 "> 
                <td >
-                <button class="dele" onclick="deleteRow(this)">x </button>
+                <input type="button" value="&#215" class="dele" onclick="deleteRow(this)">
+
              </td> 
-               <th scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap    text-white">
+               <td scope="row" class="px-2 py-2 font-medium text-gray-900 whitespace-nowrap    text-white">
                 
-                   <input type="text" class="range range6 bg-gray-800 text-center text-lg text-white" value="Thu" placeholder="Type the Range" required> 
-               </th>
+                   <input type="text" class="range range6 bg-gray-800 text-center  text-white" value="Thu" placeholder="Type the Range" required> 
+               </td>
                <td class="p-2">
-                   <input type="number" class="A-value bg-gray-800 text-center text-lg text-white" value="43" placeholder="Type the value" required> 
+                   <input type="number" class="A-value bg-gray-800 text-center  text-white" value="43" placeholder="Type the value" required> 
                </td>
                <td class="px-2 py-2">
-                   <input type="number" class="B-value bg-gray-800 text-center text-lg text-white" value="25" placeholder="Type the value" required> 
+                   <input type="number" class="B-value bg-gray-800 text-center  text-white" value="25" placeholder="Type the value" required> 
                </td>    
                
            </tr>
@@ -265,7 +270,7 @@
                           <a href="./RadialChart.html" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group text-white hover:bg-gray-700">Radial Chart</a>
                        </li>
                        <li>
-                        <a href="#" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group text-white hover:bg-gray-700">Donut Chart</a>
+                        <a href="./DonutChart.html" class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group text-white hover:bg-gray-700">Donut Chart</a>
                      </li>
                     </ul>
                  </li>
@@ -325,7 +330,13 @@
 
 function deleteRow(r) {
             var i = r.parentNode.parentNode.rowIndex;
-            document.getElementById("table").deleteRow(i);
+            if(table.rows.length >2 ){
+              document.getElementById("table").deleteRow(i);
+          }
+    
+          else{
+               alert("please add the inputs")
+          }
         }
 let charColumn = 67;
     
@@ -337,7 +348,7 @@ let charColumn = 67;
         input.setAttribute("placeholder","Type the value");
         input.setAttribute("required","")
 
-        input.setAttribute("class", String.fromCharCode(charColumn)+"-value bg-gray-800 text-center text-lg text-white" )
+        input.setAttribute("class", String.fromCharCode(charColumn)+"-value bg-gray-800 text-center  text-white" )
         const cell = document.createElement("td")
         cell.appendChild(input)
         row.appendChild(cell)
@@ -348,7 +359,7 @@ let charColumn = 67;
         input.setAttribute('value',"Column "+ String.fromCharCode(charColumn))
         input.setAttribute("placeholder","Type the Range");
         input.setAttribute("required","")
-        input.setAttribute("class",String.fromCharCode(charColumn)+" coll text-lg hover:text-white text-center bg-indigo-400 hover:bg-gray-800" )
+        input.setAttribute("class",String.fromCharCode(charColumn)+" coll  hover:text-white text-center bg-indigo-400 hover:bg-gray-800" )
         
         const cell = document.createElement("th")
         // cell.setAttribute("class","px-2 py-2 font-medium text-gray-900 whitespace-nowrap  text-white")
@@ -367,8 +378,8 @@ const addRow = () => {
   let lrows = 65;
       let table = document.getElementById("table");
       let l =document.getElementsByTagName('td').length
-
-    let lengthCol = (((l+6) / table.rows.length))
+      let rowlengths= (table.rows.length) -1;
+    let lengthCol = (l/rowlengths)
     let row = tbody.insertRow();
     row.setAttribute("scope","row");
     row.setAttribute("class"," border-b    bg-gray-800    border-gray-700 ");
@@ -384,7 +395,7 @@ const addRow = () => {
       cell.appendChild(deletee)
       }
       else if (i==1){
-     inputs.setAttribute("class","range"+rrows+" range bg-gray-800 text-center text-lg text-white")
+     inputs.setAttribute("class","range"+rrows+" range bg-gray-800 text-center  text-white")
      inputs.setAttribute("type","text")
       inputs.setAttribute("placeholder","Type the Range");
       inputs.setAttribute("required","")
@@ -393,10 +404,10 @@ const addRow = () => {
 else{
   console.log(String.fromCharCode(lrows))
   inputs.setAttribute("value","0")
- inputs.setAttribute("type","nmber")
+ inputs.setAttribute("type","number")
       inputs.setAttribute("placeholder","Type the value");
       inputs.setAttribute("required","")
-      inputs.setAttribute("class", String.fromCharCode(lrows)+"-value bg-gray-800 text-center text-lg text-white" )   
+      inputs.setAttribute("class", String.fromCharCode(lrows)+"-value bg-gray-800 text-center  text-white" )   
       lrows++; 
       cell.appendChild(inputs)
     }    
