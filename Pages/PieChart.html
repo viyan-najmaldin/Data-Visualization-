@@ -13,7 +13,7 @@
 </head>
 <body class="   bg-gray-800">
     <nav class=" border-gray-200    bg-gray-900    border-gray-700">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <div class="max-w-screen flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="../index.html" class="flex items-center">
               <img src="https://cdn-icons-png.flaticon.com/512/4110/4110554.png" class="h-10 mr-3" alt="Data VisualizationLogo" />
               <span class="self-center text-2xl font-semibold whitespace-nowrap    text-cyan-400">Data Visualization</span>
@@ -72,23 +72,24 @@
       </nav>
 
 
-      <div class="flex justify-between">
+      <div class="grid  grid-cols-4 ">
 
-      <div class="w-[76%]">
+      <div class="w-full col-span-3 ">
         <div class="flex m-6  ">
           <button class="bg-cyan-400 rounded-lg p-4 text-lg hover:duration-1000  font-serif hover:bg-orange-200 w-full py-4 px-64" id="vi">Create Chart</button>
         </div>
         <h1 class="headd">Use your data to create Pie Chart </h1>
     
-  <div class="flex">
+  <div class="flex justify-between">
     <!-- Chart -->
- <div class="max-w-lg w-full p-4 md:p-6" > 
+ <div class="w-full p-4 md:p-6" > 
   <div id="pdf">
 <div class="py-6" id="pie-chart"></div>  
     </div> 
   </div>  
 
-   <!-- inputs  -->
+  <div class="flex">
+ <!-- inputs  -->
    <div>
  <form onsubmit="cc()">
   <div class="grid gap-4 m-6 md:grid-cols-3 h-14 " id="di" >
@@ -128,6 +129,8 @@
 </svg></button>
 
   </div>
+  </div>
+  
 
 
   </div>
@@ -136,7 +139,7 @@
 
       <!-- aside  -->
 
-      <div class="border-l border-gray-700">
+      <div class="border-l border-gray-700 col-span-1 ml-20">
         <aside id="sidebar-multi-level-sidebar" class=" w-60 h-screen transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
           <div class="h-full px-3 py-4 overflow-y-auto bg-gray-800">
              <ul class="space-y-2 text-xs">
