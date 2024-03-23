@@ -25,6 +25,25 @@
 
   }
 
+  .home-img img{
+    width: 150%;
+}
+.home-img{
+    position: relative;
+    flex-grow: 2;
+  }
+  
+  .home-img::before{
+    background: linear-gradient(90deg, rgb(25, 66, 27), rgba(24, 59, 32, 0.98),rgba(38, 95, 96, 0.92),#1a003309,#1a003300) !important;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    width: 70%;
+  }
+ 
+ 
+
 .none{
   display: none;
 }
