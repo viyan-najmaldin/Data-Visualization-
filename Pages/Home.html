@@ -89,27 +89,29 @@
    
     <!-- part 1  -->
     <div class="flex flex-col-reverse md:flex-row sm:text-sm w-full justify-around md:absolute">
-      <div class="lg:m-14  mx-10 lg:text-2xl md:text-lg dd font-[laila] md:w-2/4 text-blue-400 text-bold">
+      <div class="lg:m-14  md:mx-10 lg:text-xl md:text-lg dd font-[laila] md:w-2/4 text-blue-400 text-sm text-bold ml-4 ">
+        
+
         <div class="flex">
-            <svg class="mt-2 text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 24 24">
+            <svg class="mt-2 sa7 text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 24 24">
                   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
                 </svg>
-              <span class="p-4">Fully customizable chart maker with a number of different chart types.</span>
+              <span class="p-4 typed">Fully customizable chart maker with a number <br> of different chart types.</span>
         </div>
     
-        <div class="flex">
-              <svg class="mt-2 text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 24 24">
+        <div class="flex hidden" id="text2">
+              <svg class="mt-2 sa7 text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
             </svg>
-            <span class="p-4"> Visualize your data within minutes with our Data Visualization.</span>
+            <span class="p-4" id="span2"> Visualize your data within minutes with our Data Visualization.</span>
         </div>
         
         
-        <div class="flex">
-              <svg class="mt-2 text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 24 24">
+        <div class="flex hidden" id="text3">
+              <svg class="mt-2 sa7 text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="none" viewBox="0 0 24 24">
               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.5 11.5 11 14l4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
             </svg>
-            <span class="p-4 align-middle"> Create beautiful charts that are easy for your audience to understand.</span>
+            <span class="p-4 align-middle" id="span3"> Create beautiful charts that are easy for your audience to understand.</span>
         </div>
         
       </div>
@@ -399,16 +401,38 @@
 
 <script>
    var headings = ['Use your data to create your own chart.','Learn how to grow your business with our chart.'];
-var i = 0;
-var intervalId = setInterval(function() {
+let i = 0;
+let intervalId = setInterval(function() {
   document.getElementById('heading').innerHTML = headings[i];
   if (i == (headings.length - 1)) {
     i = 0;
- 
   } else {
     i++;
   }
 }, 6000)
+
+let text2 =document.getElementById("text2");
+let text2span =document.getElementById("span2");
+setTimeout(
+()=>{
+  text2.classList.remove("hidden")
+  text2span.classList.add("typed")
+}, 2000
+)
+
+let text3 =document.getElementById("text3");
+let text3span =document.getElementById("span3");
+setTimeout(
+()=>{
+  text3.classList.remove("hidden")
+  text3span.classList.add("typed")
+}, 4000
+)
+
+
+
+
+
 </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.js"></script>
