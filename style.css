@@ -131,7 +131,7 @@
     }
 
     .line-btns{
-      padding: 7px;
+      padding: 2px;
       margin-left: 5px;
       background-color: rgb(233, 230, 125) !important;
      border-radius: 20px;
@@ -152,6 +152,8 @@
    .text2, .text3{
      width: 2% !important;
    }
+
+   
     
     .typed {
       overflow: hidden;
@@ -169,17 +171,18 @@
       to { width: 100% }
     }
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 450px) {
       .sa7{
         width: 9% !important;
         height: 9% !important;
         margin-top: 20px !important;
       }
       .line-btns{
-        padding:4px;
+        padding:0px;
         width: 25%;
         overflow-wrap: break-word;
         white-space: wrap;
+        border-radius: 10px;
         
       }
       
