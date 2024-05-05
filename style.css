@@ -175,5 +175,12 @@
         height: 9% !important;
         margin-top: 20px !important;
       }
+      .line-btns{
+        padding:4px;
+        width: 25%;
+        overflow-wrap: break-word;
+        white-space: wrap;
+        
+      }
       
     }
