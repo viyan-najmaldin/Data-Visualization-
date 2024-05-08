@@ -43,7 +43,7 @@ onAuthStateChanged(auth, (user) => {
     // signOutButton.style.display = "block";
     // message.style.display = "block";
     // location.replace("Home.html");
-    // userName.innerHTML = user.displayName;
+    userName.innerHTML = user.displayName;
     // userEmail.innerHTML = user.email
   } else {
     // signOutButton.style.display = "none";
