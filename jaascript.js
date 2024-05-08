@@ -48,6 +48,7 @@
     if(user) {
       // signOutButton.style.display = "block";
       // message.style.display = "block";
+      location.replace("Home.html");
       userName.innerHTML = user.displayName;
       userEmail.innerHTML = user.email
     } else {
@@ -55,6 +56,7 @@
       // message.style.display = "none";
     }
   })
+
 
   signInButton.addEventListener('click', userSignIn);
   // signOutButton.addEventListener('click', userSignOut);
